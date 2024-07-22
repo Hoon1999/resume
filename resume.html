@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>resume</title>
+	<style>
+		html {
+			background-color: lightblue;
+		}
+
+		body {
+			border: 1px solid black;
+		}
+
+		body,
+		header,
+		nav {
+			width: 800px;
+		}
+
+		body {
+			margin: 0px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: white;
+		}
+
+		header {
+			border: 1px solid;
+			text-align: center;
+			line-height: 30vh;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 30vh;
+			background-image: url("https://github.com/Hoon1999/hoon1999.github.io/assets/100833901/7d29a40a-dee0-406c-abfc-4e9dd7403afb");
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: white;
+			position: fixed;
+		}
+
+		nav {
+			border: 1px solid;
+			text-align: center;
+			background-color: white;
+			position: fixed;
+			top: 30vh;
+		}
+
+		nav ul {
+			margin: 0;
+			padding-inline-start: 0;
+		}
+
+		.nav>li {
+			list-style: none;
+			display: inline;
+			margin: 3%;
+		}
+
+		.nav>li>a {
+			display: inline;
+			padding: 10px 15px;
+		}
+
+		.nav>li>a:hover,
+		.nav>li>a:focus,
+		.nav>li>a:link,
+		.nav>li>a:visited {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.nav>li.disabled>a {
+			color: #777;
+		}
+
+		section {
+			height: auto;
+			margin-left: 0%;
+			float: none;
+			margin-top: 33vh;
+		}
+
+		footer {
+			height: 10vh;
+			background-color: #F2F2F2;
+		}
+
+		h3,
+		h4 {
+			margin: 0px;
+		}
+
+
+		#imageWrapper {
+			width: 20%;
+			aspect-ratio: 1/1;
+		}
+
+		#imageWrapper>img {
+			width: 100%;
+			aspect-ratio: 1/1;
+			border: 1px solid black;
+		}
+		td {
+			width: 1%;
+			padding-left: 2.5%;
+			padding-right: 2.5%;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h2>김정훈의 공개 이력서입니다</h2>
+	</header>
+	<nav>
+		<ul class="nav">
+			<li><a href="#" id="btnHome">Home</a></li>
+			<li class="disabled"><a href="#section" id="btnAbout">About</a></li>
+			<li class="disabled" id="btnPortfolio"><a>Portfolio</a></li>
+			<li><a href="#footer" id="btnBlog">Blog</a></li>
+		</ul>
+	</nav>
+
+	<section id="section">
+		<h3>기본 사항</h3>
+		<p>
+		<div id="imageWrapper" style="float: right;">
+			<img style="border-radius: 50%;" src="IMG_2419.JPG" alt="이력서 사진">
+		</div>
+		<div style="margin-left: 5%;">
+			이름 : 김정훈 <br>
+			생년월일 : 99년 09월 06일<br>
+			나이 : 26세 (만 24세)<br>
+			거주지 : 아산<br>
+			지원 분야 : BackEnd, FullStack, DBA, Network Engeener
+		</div>
+
+		</p>
+
+		<h3>학력</h3>
+		<div style="margin-left: 5%;">
+			<table>
+				<thead>
+					<tr>
+						<th>기간</th>
+						<th>학교명</th>
+						<th>전공</th>
+						<th>졸업 여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2012.03 ~ 2015.02</td>
+						<td>온양 중학교</td>
+						<td></td>
+						<td>졸업</td>
+					</tr>
+					<tr>
+						<td>2015.03 ~ 2018.02</td>
+						<td>온양 고등학교</td>
+						<td></td>
+						<td>졸업</td>
+					</tr>
+					<tr>
+						<td>2018.03 ~ 2025.02</td>
+						<td>공주대학교 공과대학</td>
+						<td>컴퓨터 공학과</td>
+						<td>졸업 예정</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<hr>
+		<h3>보유 자격증</h3>
+		<div style="margin-left: 5%;">
+			<table>
+				<thead>
+					<tr>
+						<th>취득일</th>
+						<th>자격증명</th>
+						<th>시행처</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2022.05</td>
+						<td>컴퓨터 활용 능력 1급</td>
+						<td>대한상공회의소</td>
+					</tr>
+					<tr>
+						<td>2022.10</td>
+						<td>네트워크 관리사 2급</td>
+						<td>한국정보통신자격협회</td>
+					</tr>
+					<tr>
+						<td>2023.07</td>
+						<td>SQLD</td>
+						<td>한국데이터산업진흥원</td>
+					</tr>
+					<tr>
+						<td>2023.09</td>
+						<td>정보처리 산업기사</td>
+						<td>한국산업인력공단</td>
+					</tr>
+					<tr>
+						<td>2024.06</td>
+						<td>정보처리 기사</td>
+						<td>한국산업인력공단</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<hr>
+		<h3>기술 스택</h3>
+		<div style="margin-left: 5%; text-align: center;">
+			<h4>중급</h4>
+			C, C++, Java, RDBMS(MySQL), HTML, JS
+			<h4>초급</h4>
+			CSS, Spring, Linux
+			<h4>입문</h4>
+			python
+		</div>
+		<hr>
+		<h3>프로젝트</h3>
+		<div style="margin-left: 5%;">
+			2023년 3월 ~ 2023년 6월 : 데이터베이스 설계
+			<br>
+			2024년 3월 15일 ~ 2024년 6월 14일 : spring을 활용한 웹 채팅 어플리케이션 Knung
+			<br>
+			2024년 4월 4일 ~ 2024년 6월 14일 : ChatGPT API 를 활용한 요리추천 어플리케이션(Android)
+			<br>
+			2024년 7월 15일 ~ 2024년 7월 15일 : HTML/CSS/JS 를 활용한 웹 게임(드래곤 플라이트 모작)
+		</div>
+	</section>
+	<footer id="footer" style="clear:both">
+		<br>
+		Github : https://github.com/Hoon1999/<br>
+		GitBlog : https://hoon1999.github.io/<br>
+	</footer>
+
+	<script>
+		let btnHome = document.getElementById('btnHome');
+		btnHome.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+
+		})
+		// let btnAbout = document.getElementById('btnAbout');
+		// btnAbout.addEventListener('click', function (e) {
+		// 	e.preventDefault();
+
+		// 	let element = document.querySelector('.hobby');
+		// 	let headerOffset = 340;
+		// 	let elementPosition = element.getBoundingClientRect().top;
+		// 	let offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+		// 	window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+
+		// })
+		let btnBlog = document.getElementById('btnBlog');
+		btnBlog.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			window.scrollTo({ top: 2360, behavior: 'smooth' });
+
+		})
+		window.addEventListener('scroll', function () {
+
+			let a = window.scrollX;
+			let b = window.scrollY;
+			console.log(b);
+		})
+	</script>
+</body>
+
+</html>
