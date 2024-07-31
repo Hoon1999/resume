@@ -106,10 +106,10 @@
 			aspect-ratio: 1/1;
 			border: 1px solid black;
 		}
+		th {
+			width: 25%;
+		}
 		td {
-			width: 1%;
-			padding-left: 2.5%;
-			padding-right: 2.5%;
 			text-align: center;
 		}
 	</style>
@@ -131,7 +131,7 @@
 	<section id="section">
 		<h3>기본 사항</h3>
 		<p>
-		<div id="imageWrapper" style="float: right;">
+		<div id="imageWrapper" style="float: right; visibility: hidden;">
 			<img style="border-radius: 50%;" src="IMG_2419.JPG" alt="이력서 사진">
 		</div>
 		<div style="margin-left: 5%;">
@@ -145,8 +145,8 @@
 		</p>
 
 		<h3>학력</h3>
-		<div style="margin-left: 5%;">
-			<table>
+		<div style="clear: both;">
+			<table style="width: 90%; margin: 0 auto;">
 				<thead>
 					<tr>
 						<th>기간</th>
@@ -159,20 +159,20 @@
 					<tr>
 						<td>2012.03 ~ 2015.02</td>
 						<td>온양 중학교</td>
-						<td></td>
+						<td>-</td>
 						<td>졸업</td>
 					</tr>
 					<tr>
 						<td>2015.03 ~ 2018.02</td>
 						<td>온양 고등학교</td>
-						<td></td>
+						<td>-</td>
 						<td>졸업</td>
 					</tr>
 					<tr>
 						<td>2018.03 ~ 2025.02</td>
-						<td>공주대학교 공과대학</td>
+						<td>공주대학교<br>공과대학</td>
 						<td>컴퓨터 공학과</td>
-						<td>졸업 예정</td>
+						<td>2월 졸업 예정</td>
 					</tr>
 				</tbody>
 			</table>
@@ -180,8 +180,8 @@
 
 		<hr>
 		<h3>보유 자격증</h3>
-		<div style="margin-left: 5%;">
-			<table>
+		<div>
+			<table style="width: 90%; margin: 0 auto;">
 				<thead>
 					<tr>
 						<th>취득일</th>
@@ -191,19 +191,9 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>2022.05</td>
-						<td>컴퓨터 활용 능력 1급</td>
-						<td>대한상공회의소</td>
-					</tr>
-					<tr>
-						<td>2022.10</td>
-						<td>네트워크 관리사 2급</td>
-						<td>한국정보통신자격협회</td>
-					</tr>
-					<tr>
-						<td>2023.07</td>
-						<td>SQLD</td>
-						<td>한국데이터산업진흥원</td>
+						<td>2024.06</td>
+						<td>정보처리 기사</td>
+						<td>한국산업인력공단</td>
 					</tr>
 					<tr>
 						<td>2023.09</td>
@@ -211,9 +201,19 @@
 						<td>한국산업인력공단</td>
 					</tr>
 					<tr>
-						<td>2024.06</td>
-						<td>정보처리 기사</td>
-						<td>한국산업인력공단</td>
+						<td>2023.07</td>
+						<td>SQLD</td>
+						<td>한국데이터산업진흥원</td>
+					</tr>
+					<tr>
+						<td>2022.10</td>
+						<td>네트워크 관리사 2급</td>
+						<td>한국정보통신자격협회</td>
+					</tr>
+					<tr>
+						<td>2022.05</td>
+						<td>컴퓨터 활용 능력 1급</td>
+						<td>대한상공회의소</td>
 					</tr>
 				</tbody>
 			</table>
@@ -221,13 +221,13 @@
 
 		<hr>
 		<h3>기술 스택</h3>
-		<div style="margin-left: 5%; text-align: center;">
-			<h4>중급</h4>
-			C, C++, Java, RDBMS(MySQL), HTML, JS
-			<h4>초급</h4>
+		<div style="margin-left: 5%;">
+			<h4>익숙한 기술</h4>
+			C, C++, Java, MariaDB(MySQL), HTML, JS
+			<h4>사용할줄 아는 기술</h4>
 			CSS, Spring, Linux
-			<h4>입문</h4>
-			python
+			<h4>자신없는 기술(사용해 본 기술)</h4>
+			python, php, spring data jpa, git
 		</div>
 		<hr>
 		<h3>프로젝트</h3>
@@ -243,6 +243,7 @@
 	</section>
 	<footer id="footer" style="clear:both">
 		<br>
+		E-mail : kjhoon44@gmail.com<br>
 		Github : https://github.com/Hoon1999/<br>
 		GitBlog : https://hoon1999.github.io/<br>
 	</footer>
