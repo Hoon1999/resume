@@ -95,6 +95,7 @@ h4 {
 #imageWrapper {
     width: 20%;
     aspect-ratio: 1/1;
+    margin: 15px;
 }
 
 #imageWrapper>img {
