@@ -1,0 +1,111 @@
+html {
+    background-color: white;
+}
+
+body {
+    /* border: 1px solid black; */
+}
+
+body,
+header,
+nav {
+    width: 800px;
+}
+
+body {
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+header {
+    border: 1px solid;
+    text-align: center;
+    line-height: 10vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-image: url("https://github.com/Hoon1999/hoon1999.github.io/assets/100833901/7d29a40a-dee0-406c-abfc-4e9dd7403afb");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    position: fixed;
+}
+
+nav {
+    border: 1px solid;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 10vh;
+    height: 3vh;
+}
+
+nav ul {
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.nav>li {
+    list-style: none;
+    display: inline;
+    margin: 3%;
+}
+
+.nav>li>a {
+    display: inline;
+    padding: 10px 15px;
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus,
+.nav>li>a:link,
+.nav>li>a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav>li.disabled>a {
+    color: #777;
+}
+
+section {
+    height: auto;
+    margin-left: 0%;
+    float: none;
+    margin-top: 13vh;
+}
+
+footer {
+    height: 10vh;
+    background-color: #F2F2F2;
+}
+
+h2,
+h3,
+h4 {
+    margin: 0px;
+}
+
+
+#imageWrapper {
+    width: 20%;
+    aspect-ratio: 1/1;
+}
+
+#imageWrapper>img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+th {
+    width: 25%;
+}
+td {
+    text-align: center;
+}
+#profile td {
+    text-align: left;
+}
