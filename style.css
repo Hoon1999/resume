@@ -1,5 +1,5 @@
 html {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 body {
@@ -76,6 +76,11 @@ section {
     margin-left: 0%;
     float: none;
     margin-top: 13vh;
+}
+
+.page-card {
+    background-color: white;
+    border: 1px solid gray;
 }
 
 footer {
