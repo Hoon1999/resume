@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    width: 1000px;
+    width: 1200px;
     margin: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -73,7 +73,7 @@ td {
 }
 
 aside {
-    width: 150px;
+    width: 200px;
     margin-top: 13vh;
     position: sticky;
     top: 13vh;
