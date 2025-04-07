@@ -2,11 +2,6 @@ html {
     background-color: whitesmoke;
 }
 
-header,
-nav {
-    width: 800px;
-}
-
 body {
     width: 1000px;
     margin: 0px;
@@ -29,43 +24,6 @@ header {
     background-size: cover;
     color: white;
     position: fixed;
-}
-
-nav {
-    border: 1px solid;
-    text-align: center;
-    background-color: white;
-    position: fixed;
-    top: 10vh;
-    height: 3vh;
-}
-
-nav ul {
-    margin: 0;
-    padding-inline-start: 0;
-}
-
-.nav>li {
-    list-style: none;
-    display: inline;
-    margin: 3%;
-}
-
-.nav>li>a {
-    display: inline;
-    padding: 10px 15px;
-}
-
-.nav>li>a:hover,
-.nav>li>a:focus,
-.nav>li>a:link,
-.nav>li>a:visited {
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav>li.disabled>a {
-    color: #777;
 }
 
 section {

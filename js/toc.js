@@ -13,7 +13,7 @@ function createToC() {
         a.addEventListener('click', function (e) {
             e.preventDefault();
 
-            let t = tag.getBoundingClientRect().top + window.pageYOffset - 340 // 해당 h3 태그의 top 좌표를 가져옴. + 340 은 스크롤 위치를 조정하기 위한 오프셋
+            let t = tag.getBoundingClientRect().top + window.pageYOffset - 100 // 해당 h3 태그의 top 좌표를 가져옴. + 340 은 스크롤 위치를 조정하기 위한 오프셋
             
             window.scrollTo({ top: t, behavior: 'smooth' }) // 해당 좌표의 위치로 스크롤된다.
         })
