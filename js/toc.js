@@ -37,4 +37,6 @@ function createToC() {
             }   
         })
     })
+    // observer 에 관찰할 tag들을 등록한다.
+    tags.forEach(tag => observer.observe(tag))
 }
