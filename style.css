@@ -38,7 +38,10 @@ section {
     border: 1px solid gray;
     padding: 15px;
 }
-
+tr>a {
+    text-decoration: none;
+    color: inherit;
+}
 footer {
     height: 10vh;
     background-color: #F2F2F2;
