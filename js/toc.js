@@ -36,6 +36,9 @@ function createToC() {
                 // selectedIndex 에 1이 할당되고, 1번 요소의 class 에 selected 가 추가됨
                 selectedIndex = entry.target.dataset.index;
                 console.log('after idx : ', selectedIndex);
+                console.log('entry : ' , entry);
+                console.log('entry.target : ', entry.target);
+                console.log('entry.target.dataset : ', entry.target.dataset);
                 // tocItems[selectedIndex].classList.add('selected');
             }   
         });
