@@ -14,7 +14,7 @@ function createToC() {
             e.preventDefault();
 
             let t = tag.getBoundingClientRect().top // 해당 h3 태그의 top 좌표를 가져옴.
-
+            console.log(t, " 좌표로 이동합니다.");
             window.scrollTo({ top: t, behavior: 'smooth' }) // 해당 좌표의 위치로 스크롤된다.
         })
         li.innerText = tag.textContent; // h3 의 innerText를 가져와 할당한다.
