@@ -31,15 +31,10 @@ function createToC() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // 1번 요소가 화면에 들어오면, 이전 값인 0또는 2번 요소의 class 에서 selected 가 삭제됨.
-                // tocItems[selectedIndex].classList.remove('selected');
-                console.log('befor idx : ', selectedIndex);
+                tocItems[selectedIndex].classList.remove('selected');
                 // selectedIndex 에 1이 할당되고, 1번 요소의 class 에 selected 가 추가됨
                 selectedIndex = entry.target.dataset.index;
-                console.log('after idx : ', selectedIndex);
-                console.log('entry : ' , entry);
-                console.log('entry.target : ', entry.target);
-                console.log('entry.target.dataset : ', entry.target.dataset);
-                // tocItems[selectedIndex].classList.add('selected');
+                tocItems[selectedIndex].classList.add('selected');
             }   
         });
     });
