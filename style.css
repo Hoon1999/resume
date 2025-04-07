@@ -121,3 +121,12 @@ aside {
     top: 13vh;
     height: 200px;
 }
+
+.toc-list>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.toc-item {
+    list-style: none;
+}
