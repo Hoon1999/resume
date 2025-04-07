@@ -130,3 +130,7 @@ aside {
 .toc-item {
     list-style: none;
 }
+
+.toc-item.selected {
+    font-weight: bold;
+}
