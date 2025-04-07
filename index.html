@@ -9,6 +9,7 @@
 		
 	</style>
 	<link rel="stylesheet" href="./style.css">
+	<script src="./js/toc.js"></script>
 </head>
 
 <body>
@@ -244,6 +245,10 @@
 		</div>
 
 	</section>
+	<aside>
+		<ul id="toc-list">
+		</ul>
+	</aside>
 	<!-- <footer id="footer" style="clear:both">
 		<br>
 		E-mail : kjhoon44@gmail.com<br>
@@ -252,6 +257,7 @@
 	</footer> -->
 
 	<script>
+		createToc();
 		let btnHome = document.getElementById('btnHome');
 		btnHome.addEventListener('click', function (e) {
 			e.preventDefault();
