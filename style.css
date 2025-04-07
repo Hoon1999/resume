@@ -2,17 +2,18 @@ html {
     background-color: whitesmoke;
 }
 
-body,
 header,
 nav {
     width: 800px;
 }
 
 body {
+    width: 1000px;
     margin: 0px;
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
+    display: flex;
 }
 
 header {
@@ -111,4 +112,12 @@ td {
 }
 #profile td {
     text-align: left;
+}
+
+aside {
+    width: 200px;
+    margin-top: 13vh;
+    position: sticky;
+    top: 13vh;
+    height: 200px;
 }
