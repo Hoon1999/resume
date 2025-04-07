@@ -31,13 +31,15 @@ function createToC() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // 1번 요소가 화면에 들어오면, 이전 값인 0또는 2번 요소의 class 에서 selected 가 삭제됨.
-                tocItems[selectedIndex].classList.remove('selected');
+                // tocItems[selectedIndex].classList.remove('selected');
+                console.log('befor idx : ', selectedIndex);
                 // selectedIndex 에 1이 할당되고, 1번 요소의 class 에 selected 가 추가됨
                 selectedIndex = entry.target.dataset.index;
-                tocItems[selectedIndex].classList.add('selected');
+                console.log('after idx : ', selectedIndex);
+                // tocItems[selectedIndex].classList.add('selected');
             }   
-        })
-    })
+        });
+    });
     // observer 에 관찰할 tag들을 등록한다.
     tags.forEach(tag => observer.observe(tag));
 }
