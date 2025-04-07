@@ -18,6 +18,7 @@ function createToC() {
             window.scrollTo({ top: t, behavior: 'smooth' }) // 해당 좌표의 위치로 스크롤된다.
         })
         li.innerText = tag.textContent; // h3 의 innerText를 가져와 할당한다.
+        li.classList.add('toc-item');
 
         a.appendChild(li);
         toc_list.appendChild(a);
