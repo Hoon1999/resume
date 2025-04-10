@@ -25,12 +25,12 @@ function createToC() {
     })
     let selectedIndex = 0;
     let beforeSelectedIndex = 0;
+    let selectedToCItemTop = 9999;
     const tocItems = document.querySelectorAll('.toc-item');
     // 현재 관찰중인 태그들 중 변화가 생긴 태그들의 list 를 브라우저가 entries 로 던져준다.
     const observer = new IntersectionObserver(entries => {
         beforeSelectedIndex = selectedIndex;
         // 변화가 생긴 tag (여기서는 화면에 들어오는 tag 를 의미함) 의 class 를 변경하여 style에 변화를 준다.
-        let selectedToCItemTop = 9999;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 if(entry.boundingClientRect.top < selectedToCItemTop) {
