@@ -33,8 +33,9 @@ function createToC() {
         // 변화가 생긴 tag (여기서는 화면에 들어오는 tag 를 의미함) 의 class 를 변경하여 style에 변화를 준다.
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log('entry.target : ', entry.target);
+                console.log('entry.boundingClientRect.top < selectedToCItemTop : ',entry.boundingClientRect.top, ' < ', selectedToCItemTop)
                 if(entry.boundingClientRect.top < selectedToCItemTop) {
-                    console.log(entry.boundingClientRect.top, ' < ', selectedToCItemTop)
                     selectedToCItemTop = entry.boundingClientRect.top;
                     selectedIndex = entry.target.dataset.index;
                 }
