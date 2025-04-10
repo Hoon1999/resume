@@ -28,13 +28,17 @@ function createToC() {
     // 현재 관찰중인 태그들 중 변화가 생긴 태그들의 list 를 브라우저가 entries 로 던져준다.
     const observer = new IntersectionObserver(entries => {
         // 변화가 생긴 tag (여기서는 화면에 들어오는 tag 를 의미함) 의 class 를 변경하여 style에 변화를 준다.
+        let selectedToCItemTop = 9999;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // 1번 요소가 화면에 들어오면, 이전 값인 0또는 2번 요소의 class 에서 selected 가 삭제됨.
-                tocItems[selectedIndex].classList.remove('selected');
-                // selectedIndex 에 1이 할당되고, 1번 요소의 class 에 selected 가 추가됨
-                selectedIndex = entry.target.dataset.index;
-                tocItems[selectedIndex].classList.add('selected');
+                if(entry.boundingClientRect.top < selectedToCItemTop) {
+                    selectedToCItemTop = entry.boundingClientRect.top;
+                    // 1번 요소가 화면에 들어오면, 이전 값인 0또는 2번 요소의 class 에서 selected 가 삭제됨.
+                    tocItems[selectedIndex].classList.remove('selected');
+                    // selectedIndex 에 1이 할당되고, 1번 요소의 class 에 selected 가 추가됨
+                    selectedIndex = entry.target.dataset.index;
+                    tocItems[selectedIndex].classList.add('selected');
+                }
             }   
         });
     });
