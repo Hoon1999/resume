@@ -25,27 +25,27 @@ function createToC() {
     })
     let selectedIndex = 0;
     let beforeSelectedIndex = 0;
-    let selectedToCItemTop = 9999;
+    const visibleMap = new Map(); // 보이는 요소 추적
     const tocItems = document.querySelectorAll('.toc-item');
     // 현재 관찰중인 태그들 중 변화가 생긴 태그들의 list 를 브라우저가 entries 로 던져준다.
     const observer = new IntersectionObserver(entries => {
-        beforeSelectedIndex = selectedIndex;
-        // 변화가 생긴 tag (여기서는 화면에 들어오는 tag 를 의미함) 의 class 를 변경하여 style에 변화를 준다.
         entries.forEach(entry => {
-            console.log('entry.target : ', entry.target);
-            if (entry.isIntersecting) {
-                console.log('entry.target true : ', entry.target);
-                console.log('entry.boundingClientRect.top < selectedToCItemTop : ',entry.boundingClientRect.top, ' < ', selectedToCItemTop)
-                if(entry.boundingClientRect.top < selectedToCItemTop) {
-                    selectedToCItemTop = entry.boundingClientRect.top;
-                    selectedIndex = entry.target.dataset.index;
+            visibleMap.set(entry.target, entry.isIntersecting);
+        });
+
+        let selectedToCItemTop = 9999;
+        visibleMap.forEach((isVisible, target) => {
+            let idx = target.dataset.index;
+            if(isVisible) {
+                if(target.getBoundingClientRect().top < selectedToCItemTop){
+                    selectedToCItemTop = target.getBoundingClientRect().top;
+                    tocItems[idx].classList.add('selected');
                 }
             }
+            else {
+                tocItems[idx].classList.remove('selected');
+            }
         });
-        // 새로운 h3 태그가 화면에 들어오면, 이전에 하이라이트 된 toc 요소는 selected 클래스가 지워짐.
-        tocItems[beforeSelectedIndex].classList.remove('selected');
-        // 새로운 h3 태그가 화면에 들어오면, 해당 toc 요소에 selected 클래스가 추가됨.
-        tocItems[selectedIndex].classList.add('selected');
     });
     // observer 에 관찰할 tag들을 등록한다.
     tags.forEach(tag => observer.observe(tag));
