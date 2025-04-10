@@ -37,6 +37,10 @@ function createToC() {
         visibleMap.forEach((isVisible, target) => {
             let idx = target.dataset.index;
             if(isVisible) {
+                console.log('------------------');
+                console.log('taget : ', target);
+                console.log('target.top : ', target.getBoundingClientRect().top);
+                console.log('selected ToC Item Top : ', selectedToCItemTop);
                 if(target.getBoundingClientRect().top < selectedToCItemTop){
                     selectedToCItemTop = target.getBoundingClientRect().top;
                     tocItems[idx].classList.add('selected');
