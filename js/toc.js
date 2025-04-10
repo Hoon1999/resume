@@ -24,11 +24,11 @@ function createToC() {
         toc_list.appendChild(a);
     })
     let selectedIndex = 0;
-    let beforeSelectedIndex = 0;
     const visibleMap = new Map(); // 보이는 요소 추적
     const tocItems = document.querySelectorAll('.toc-item');
     // 현재 관찰중인 태그들 중 변화가 생긴 태그들의 list 를 브라우저가 entries 로 던져준다.
     const observer = new IntersectionObserver(entries => {
+        // h3 들이 화면에 보이면 target1 : true, 안보이면 target2 : false 이런 식으로 저장.
         entries.forEach(entry => {
             visibleMap.set(entry.target, entry.isIntersecting);
         });
@@ -36,13 +36,12 @@ function createToC() {
         let selectedToCItemTop = 9999;
         visibleMap.forEach((isVisible, target) => {
             if(isVisible) {
-                console.log('------------------');
-                console.log('taget : ', target);
-                console.log('target.top : ', target.getBoundingClientRect().top);
-                console.log('selected ToC Item Top : ', selectedToCItemTop);
+                // 화면에 보이는 h3(target) 중 최상단 요소만 선택하는 분기문.
                 if(target.getBoundingClientRect().top < selectedToCItemTop){
                     selectedToCItemTop = target.getBoundingClientRect().top;
+                    // 이전에 선택된 toc 요소의 class 에서 selected 삭제
                     tocItems[selectedIndex].classList.remove('selected');
+                    // 현재 화면에 highlight 되어야하는 toc 요소에 selected 클래스 추가.
                     selectedIndex = target.dataset.index;
                     tocItems[selectedIndex].classList.add('selected');
                 }
