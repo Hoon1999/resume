@@ -35,7 +35,6 @@ function createToC() {
 
         let selectedToCItemTop = 9999;
         visibleMap.forEach((isVisible, target) => {
-            let idx = target.dataset.index;
             if(isVisible) {
                 console.log('------------------');
                 console.log('taget : ', target);
@@ -43,11 +42,10 @@ function createToC() {
                 console.log('selected ToC Item Top : ', selectedToCItemTop);
                 if(target.getBoundingClientRect().top < selectedToCItemTop){
                     selectedToCItemTop = target.getBoundingClientRect().top;
-                    tocItems[idx].classList.add('selected');
+                    tocItems[selectedIndex].classList.remove('selected');
+                    selectedIndex = target.dataset.index;
+                    tocItems[selectedIndex].classList.add('selected');
                 }
-            }
-            else {
-                tocItems[idx].classList.remove('selected');
             }
         });
     });
